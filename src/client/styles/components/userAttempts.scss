@@ -1,0 +1,26 @@
+.list-group {
+  display: contents;
+}
+
+.list-group-item {
+  text-align: center;
+  margin-top: 0.5rem;
+  border-radius: 1.5rem !important;
+  background-color: aliceblue;
+}
+
+.highlight-pass {
+  background-color: #89bbf1;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+.attempt-count {
+  padding-top: 0.5rem;
+  font-weight: bolder;
+  color: #6e7883;
+  font-size: smaller;
+  padding-right: 1rem;
+  letter-spacing: 1px;
+  float: right !important;
+}

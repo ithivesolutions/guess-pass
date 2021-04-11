@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="1" errors="0" time="13.584">
+  <testsuite name="test\server\server.test.js" errors="0" failures="1" skipped="0" timestamp="2021-04-11T06:59:56" time="7.861" tests="2">
+    <testcase classname="Guess app Server unit test &gt; Should get the Hint from server and the verify the user answer - should get Hint" name="Guess app Server unit test &gt; Should get the Hint from server and the verify the user answer - should get Hint" time="2.035">
+    </testcase>
+    <testcase classname="Guess app Server unit test &gt; Should fail when verify process - should fail when vefiry with 404" name="Guess app Server unit test &gt; Should fail when verify process - should fail when vefiry with 404" time="0.06">
+      <failure>Error: read ECONNRESET
+    at TCP.onStreamRead (internal/stream_base_commons.js:209:20)</failure>
+      <failure>Error: Server is not running.Error [ERR_SERVER_NOT_RUNNING]: Server is not running.
+    at Server.close (net.js:1605:12)
+    at Object.onceWrapper (events.js:420:28)
+    at Server.emit (events.js:326:22)
+    at emitCloseNT (net.js:1658:8)
+    at processTicksAndRejections (internal/process/task_queues.js:79:21)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="test\client\client.test.js" errors="0" failures="0" skipped="0" timestamp="2021-04-11T06:59:56" time="8.237" tests="3">
+    <testcase classname="Guess app Client unit tests - renders App without crashing" name="Guess app Client unit tests - renders App without crashing" time="0.11">
+    </testcase>
+    <testcase classname="Guess app Client unit tests - should be able to change the input" name="Guess app Client unit tests - should be able to change the input" time="0.037">
+    </testcase>
+    <testcase classname="User attempts unit tests - render Add UserAttempts component without crashing" name="User attempts unit tests - render Add UserAttempts component without crashing" time="0.03">
+    </testcase>
+  </testsuite>
+</testsuites>
