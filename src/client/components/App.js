@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 import * as passApi from "../api/passModelApi";
 

@@ -54,11 +54,11 @@ describe("Guess app Server unit test", () => {
   });
 
   describe("Should fail when verify process", () => {
-    it("should fail when vefiry with 404", function (done) {
+    it("should fail when vefiry with 404", (done) => {
       request(server)
         .post(apiPrimaryRoute + "verifyPass")
         .send({ params: secRequest })
-        .end(function (err, res) {
+        .end((err, res) => {
           if (err) {
             return done();
           }

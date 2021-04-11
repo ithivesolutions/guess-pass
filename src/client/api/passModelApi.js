@@ -1,5 +1,5 @@
 import axios from "axios";
-import qs from "qs"; // part of Axios
+import qs from "qs";
 import Constants from "../common/Constants";
 
 // To use nested JSON params
@@ -48,4 +48,3 @@ export const verifyPassword = (params) => {
       });
   });
 };
-

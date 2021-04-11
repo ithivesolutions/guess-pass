@@ -2,16 +2,8 @@ import React from "react";
 import { Row, Col, Card, ListGroup } from "react-bootstrap";
 import _ from "lodash";
 
-export default class UserAttempts extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  attemptsDisplay = () => {
-    const props = this.props;
-
+const UserAttempts = (props) => {
+  const attemptsDisplay = () => {
     return (
       props.userAttempts &&
       props.userAttempts.map((eachAttempt, i) => {
@@ -38,18 +30,16 @@ export default class UserAttempts extends React.Component {
     );
   };
 
-  render() {
-    const props = this.props;
-
-    return (
-      <Card>
-        <div>
-          <div className="attempt-count">
-            Total Attempts - {_.size(props.userAttempts)}
-          </div>
-          <Card.Body key={"card-bdy"}>{this.attemptsDisplay()}</Card.Body>
+  return (
+    <Card>
+      <div>
+        <div className="attempt-count">
+          Total Attempts - {_.size(props.userAttempts)}
         </div>
-      </Card>
-    );
-  }
-}
+        <Card.Body key={"card-bdy"}>{attemptsDisplay()}</Card.Body>
+      </div>
+    </Card>
+  );
+};
+
+export default UserAttempts;
