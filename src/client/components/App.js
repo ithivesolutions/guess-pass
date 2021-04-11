@@ -85,7 +85,7 @@ export default class App extends Component {
         <Container className="app-Wrap">
           <Header />
           <div className="welcome-note">
-            Welcome to Guess password game - You will get a hint of the 8 digit
+            Welcome to Guess password game - You will get a hint for the 8 digit
             passoword below - Enjoy hacking!{" "}
           </div>
           <h3 className="inp-hint">

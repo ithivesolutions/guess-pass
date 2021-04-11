@@ -19,9 +19,9 @@
 ---
 ## Introduction
 
-Guess Password is a [React](https://reactjs.org/) application with a [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) backend. Client side code is written in React and the backend API (server side code) is written using Express. This application is configured with [Airbnb's ESLint rules](https://github.com/airbnb/javascript) and formatted through [prettier](https://prettier.io/).
+Guess Password is a [React](https://reactjs.org/) application with [Node.js](https://nodejs.org/en/) and [Express](https://expressjs.com/) backend. Client side code is written in React and the backend API (server side code) is written using Express. This application is configured with [Airbnb's ESLint rules](https://github.com/airbnb/javascript) and formatted through [prettier](https://prettier.io/).
 
-On Application page load user will get a hint of the 8 digit password, so the user can hack the puzzle. Only upon providing 8 digits input the user can validate the guessed pasword. Correct position of the digits will be highlighted in the attempt log/history.
+On Application page load user will get a hint for the 8 digit password, to hack the puzzle. Only upon providing 8 digit input the user can validate the guessed pasword. Correct position of the digit will be highlighted in the attempt log/history.
 
 ### Development mode
 
@@ -29,7 +29,7 @@ In the development mode, we will have 2 servers running. The front end code will
 
 ### Production mode
 
-In the production mode, All the client side code will be bundled into static files using webpack and it will be served by [webpack dev server](https://webpack.js.org/configuration/dev-server/) in production mode. Where as in actual production movement we can either serve it by the Node.js/[Express](https://expressjs.com/) or [Nginx](https://www.nginx.com/).
+In the production mode, All the client side code will be bundled into static files using webpack and it will be served by [webpack dev server](https://webpack.js.org/configuration/dev-server/). Where as in actual production movement we can either serve it by the Node.js/[Express](https://expressjs.com/) or [Nginx](https://www.nginx.com/).
 
 ---
 ## Quick Start
@@ -58,7 +58,7 @@ The application starts in [localhost:3000](http://localhost:3000/)
 
 #### Folder Structure
 
-All the source code will be inside **src** directory. Inside src, there is client and server directory. All the frontend code (react, css, js and any other assets) will be in client directory. Backend Node.js/Express code will be in the server directory.
+All the source code will be inside **src** directory. Inside src, there is client and server directory. All the frontend code (react, scss, js and any other assets) will be in client directory. Backend Node.js/Express code will be in the server directory.
 
 #### Babel
 [Babel](https://babeljs.io/) helps us to write code in the latest version of JavaScript and helps us to convert JSX to Javascript.
@@ -143,13 +143,15 @@ This starts a server and listens on port 8080 for connections. The app responds 
 
 #### Concurrently
 
-[Concurrently](https://github.com/kimmobrunfeldt/concurrently) is used to run multiple commands concurrently. I am using it to run the webpack dev server and the backend node server concurrently in the development environment. Below are the npm/yarn script commands used.
+[Concurrently](https://github.com/kimmobrunfeldt/concurrently) is used to run multiple commands concurrently. I am using it to run the webpack dev server and the backend node server concurrently in the development environment.
 
 #### Node-Cache
-[Node-Cache](https://github.com/node-cache/node-cache) is used to store the server side data. A random password is selected from the set of password store and then suffle the same to generate the Hint. These informations are stored in Node-Cache memory for 100 seconds to use it in validation process. After 100 seconds the data will be flused and the application will through 404 error upon validation request.
+[Node-Cache](https://github.com/node-cache/node-cache) is used to store the server side data. A random password is selected from the set of password store and then shuffle the same to generate the Hint. These information are stored in Node-Cache memory for 100 seconds to be used during the validation process. After 100 seconds the data will be flushed out and the application will throw 404 error upon validation request.
 
 ---
 ## Testing 
+
+All the unit test cases are inside **test** directory. Inside test, there is client and server directory.
 
 ```bash
 # test application
@@ -166,6 +168,7 @@ The test suite generates a coverage folder in root directory ==> <'root-director
 ---
 ## Improvements
 
-[Formik](https://formik.org/) can be used to create the form, to get the Input values. It has lot of features to enrich the Client side code. This library is widley used and trusted.
+1. [Formik](https://formik.org/) can be used to create the form, to get the Input values. It has lot of features to enrich the Client side form processing. This library is widley used and trusted.
+2. E2E test cases can be implemented for a better performing application.
 
 
